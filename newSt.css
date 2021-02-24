@@ -247,7 +247,7 @@
   
   
     /* background-size: 600% 600%;	 */
-	background-image: url("ruleta fondo.jpg");
+	background-image: url("fondo.jpg");
 	/* Full height */
 	  height: 100%;
 
@@ -340,7 +340,7 @@
   
   .marker {
     position: absolute;
-    left: 555px;
+    left: 460px;
     top: 334px;
     width: 201px;
     z-index: 2;
