@@ -24,6 +24,8 @@
 	isPaused: null,		//call and returns true or false depending on whether the confetti animation is paused
 	isRunning: null		//call and returns true or false depending on whether the animation is running
 };
+
+var modal = document.getElementById("myModal");
  
  // Random generating elements
  for(var i = 0; i < nbElements; i++){
@@ -80,8 +82,7 @@
 		startButton.style.pointerEvents = 'none';
 		// Calculate a new rotation between 5000 and 10 000
 		deg = changeText()
-				
-
+		
 		// Set the transition on the wheel
 		wheel.style.transition = 'all 10s ease-out';
 		//  Rotate the wheel
@@ -92,15 +93,16 @@
 		console.log("inicio");	
 
 		await delay(10000);
-		//fondo.pause();		
+		//fondo.pause();			
 		
 		startConfetti();
 		new Audio('./win.mp3').play();
-		Swal.fire({
-			title: '¡Felicidades!',
-			icon: "success",
-			html: '<img src="./img/refrescar.png" width="200" height="200">'
-		});
+		// Swal.fire({
+		// 	title: '',
+		// 	html: '<img src="./img/felicidades.jpeg" style="width:100%;">'
+		// });
+		await delay(2000);
+		modal.style.display = "block";
 
 		await delay(5000);
 		stopConfetti();
@@ -120,6 +122,34 @@
        // Set the real rotation instantly without animation
      wheel.style.transform = `rotate(${actualDeg}deg)`;
    });
+
+   /** Inicia modal popoup */
+   // Get the modal
+	
+	
+	// Get the button that opens the modal
+	//var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on the button, open the modal
+	// btn.onclick = function() {
+	// modal.style.display = "block";
+	// }
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+	}
+   /** Fin modal popup */
 
    /** Inicia Confetti */
     confetti.start = startConfetti;
