@@ -68,6 +68,12 @@ var modal = document.getElementById("myModal");
       return texts[index]
     }
 
+	function getRandomInt(min, max) {
+		var rand = Math.floor(Math.random() * (max - min)) + min;
+		console.log(rand);  
+		return rand;
+	}
+
 
     let deg = 5000;
 
@@ -81,7 +87,8 @@ var modal = document.getElementById("myModal");
 		//  Disable button during spin
 		startButton.style.pointerEvents = 'none';
 		// Calculate a new rotation between 5000 and 10 000
-		deg = changeText()
+		//deg = changeText()
+		deg = getRandomInt(2000, 6000);		
 		
 		// Set the transition on the wheel
 		wheel.style.transition = 'all 10s ease-out';
