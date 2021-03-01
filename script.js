@@ -51,7 +51,7 @@ var modal = document.getElementById("myModal");
    const startButton = document.querySelector('.button');
 
 
-   var texts = ["4500", "5200", "3820", "4800", "4500","5200", "3820", "4800", "4500", "3850"],
+   var texts = ["4500", "5200", "3820", "4820", "4220","5200", "3820", "4800", "4520", "3850"],
     btn = document.getElementById("myBtn"),
     text = document.getElementById("myText"),
     index = 0;
@@ -92,8 +92,9 @@ var modal = document.getElementById("myModal");
 			
 		console.log("inicio");	
 
-		await delay(10000);
-		//fondo.pause();			
+		await delay(11000);
+		//fondo.pause();	
+		//await delay(2000);		
 		
 		startConfetti();
 		new Audio('./win.mp3').play();
@@ -101,7 +102,7 @@ var modal = document.getElementById("myModal");
 		// 	title: '',
 		// 	html: '<img src="./img/felicidades.jpeg" style="width:100%;">'
 		// });
-		await delay(2000);
+		
 		modal.style.display = "block";
 
 		await delay(5000);
