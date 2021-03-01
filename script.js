@@ -26,6 +26,7 @@
 };
 
 var modal = document.getElementById("myModal");
+var textVersion = document.getElementById("version");
  
  // Random generating elements
  for(var i = 0; i < nbElements; i++){
@@ -367,8 +368,8 @@ $(function() {
   var size = 'small';
   var createStar = function() {
     template.clone().removeAttr('id').css({
-      top: (Math.random() * 100) + '%',
-      left: (Math.random() * 100) + '%',
+      top: (Math.random() * 90) + '%',
+      left: (Math.random() * 90) + '%',
       webkitAnimationDelay: (Math.random() * sparkle) + 's',
       mozAnimationDelay: (Math.random() * sparkle) + 's'
     }).addClass(size).appendTo(body);
