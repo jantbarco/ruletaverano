@@ -105,7 +105,7 @@ var textVersion = document.getElementById("version");
 		//await delay(2000);		
 		
 		startConfetti();
-		new Audio('./win.mp3').play();
+		new Audio('./fin.mp3').play();
 		// Swal.fire({
 		// 	title: '',
 		// 	html: '<img src="./img/felicidades.jpeg" style="width:100%;">'
