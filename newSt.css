@@ -207,13 +207,18 @@
 	  /* Center and scale the image nicely */
     background-position: left;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
+    /*background-size: contain;*/
     /* -webkit-animation: AnimationName 13s ease infinite; */
     /* -moz-animation: AnimationName 13s ease infinite; */
     /* animation: AnimationName 13s ease infinite; */
   
     /* background: linear-gradient(62deg,#e49c00 0, #000000 100%); */
   }
+
+  html {
+    height: 99%
+}
   
   #snow{
     background: none;
