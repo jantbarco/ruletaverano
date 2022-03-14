@@ -200,16 +200,14 @@
   }
   
   body{ 
-  
-    /* background-size: 600% 600%;	 */
-	  background-image: url("./img/fondo.jpeg");
+  background-image: url("./img/fondo1.jpg");
 	/* Full height */
-	  height: 99%;
+	  height: 98%;
 
 	  /* Center and scale the image nicely */
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     /* -webkit-animation: AnimationName 13s ease infinite; */
     /* -moz-animation: AnimationName 13s ease infinite; */
     /* animation: AnimationName 13s ease infinite; */
@@ -444,11 +442,12 @@
 /* Modal Content/Box */
 .modal-content {
   /*background-color: #fefefe;*/
-  background: linear-gradient(180deg, #169cf1 60%, #fe3d38 60%);
+  background: transparent;
   margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
+
+  /*border: 1px solid #888;*/
+  width: 70%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
