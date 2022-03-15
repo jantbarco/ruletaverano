@@ -71,7 +71,7 @@ var textVersion = document.getElementById("version");
 
 	function getRandomInt(min, max) {
 		var rand = Math.floor(Math.random() * (max - min)) + min;
-		console.log(rand);  
+		console.log(rand);
 		return rand;
 	}
 
@@ -112,6 +112,12 @@ var textVersion = document.getElementById("version");
 		// });
 		
 		modal.style.display = "block";
+
+		window.onclick = function(event) {
+			if (event.target == modal) {
+			  modal.style.display = "none";
+			}
+		  }
 
 		await delay(5000);
 		stopConfetti();
